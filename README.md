@@ -6,4 +6,6 @@
 
 ***
 
+Worked in collaboration with Micah Diaz
+
 [Password Generator](https://kemwalsh.github.io/JS-Pasword_Generator/)
