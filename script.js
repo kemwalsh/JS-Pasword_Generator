@@ -14,6 +14,22 @@ function generatePassword() {
 
 
 
+  // get input and validate
+  selected = parseInt(prompt("How many characters do you want in your password? Choose between 8-128 characters?"));
+  if (!selected) {
+    alert("You must enter a value");
+  } else if (selected < 8 || selected > 128) {
+    alert("You must enter a value between 8-128.");
+  } else {
+    wantLowercase = confirm("Do you want lowercase characters?");
+    wantUppercase = confirm("Do you want uppercase characters?");
+    wantSpecial = confirm("Do you want special characters?");
+    wantNumeric = confirm("Do you want numbers?");
+  };
+
+
+
+
 
 
 // // Assignment Code
