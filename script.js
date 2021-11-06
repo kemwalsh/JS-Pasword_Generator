@@ -86,6 +86,25 @@ function generatePassword() {
     picked = specialCharacters;
   }
 
+  // This is a loop for where the characters are chosen.
+
+  for (let i = 0; i < selected; i++) {
+    let selectedCharacters = picked[Math.floor(Math.random() * picked.length)];
+    tempPassword.push(selectedCharacters);
+  }
+  var password = tempPassword.join("");
+  return password;
+};
+
+function writePassword() {
+  password = generatePassword();
+  document.getElementById("password").placeholder = password;
+}
+
+// Event listener to generate button
+
+generateBtn.addEventListener("click", writePassword);
+
 
 
 
