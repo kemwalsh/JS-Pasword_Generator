@@ -27,6 +27,65 @@ function generatePassword() {
     wantNumeric = confirm("Do you want numbers?");
   };
 
+  // If didnt select any options
+  if (!wantLowercase && !wantUppercase && !wantNumeric && !wantSpecial) {
+    picked = alert("Please select at least one character type.");
+  }
+
+  // If selected four options
+  else if (wantLowercase && wantUppercase && wantNumeric && wantSpecial) {
+    picked = lowercaseCharacters.concat(uppercaseCharacters, numericCharacters, specialCharacters);
+  }
+
+  // If selected three options
+  else if (wantLowercase && wantUppercase && wantNumeric) {
+    picked = lowercaseCharacters.concat(uppercaseCharacters, numericCharacters);
+  }
+  else if (wantLowercase && wantUppercase && wantSpecial) {
+    picked = lowercaseCharacters.concat(uppercaseCharacters, specialCharacters);
+  }
+  else if (wantLowercase && wantNumeric && wantSpecial) {
+    picked = lowercaseCharacters.concat(numericCharacters, specialCharacters);
+  }
+  else if (wantUppercase && wantNumeric && wantSpecial) {
+    picked = uppercaseCharacters.concat(numericCharacters, specialCharacters);
+  }
+
+  // If select two options
+  else if (wantLowercase && wantUppercase) {
+    picked = lowercaseCharacters.concat(uppercaseCharacters);
+  }
+  else if (wantLowercase && wantNumeric) {
+    picked = lowercaseCharacters.concat(numericCharacters);
+  }
+  else if (wantLowercase && wantSpecial) {
+    picked = lowercaseCharacters.concat(specialCharacters);
+  }
+  else if (wantUppercase && wantNumeric) {
+    picked = uppercaseCharacters.concat(numericCharacters);
+  }
+  else if (wantUppercase && wantSpecial) {
+    picked = uppercaseCharacters.concat(specialCharacters);
+  }
+  else if (wantNumeric && wantSpecial) {
+    picked = numericCharacters.concat(specialCharacters);
+  }
+
+  // If selected one option
+
+  else if (wantLowercase) {
+    picked = lowercaseCharacters;
+  }
+  else if (wantUppercase) {
+    picked = uppercaseCharacters;
+  }
+  else if (wantNumeric) {
+    picked = numericCharacters;
+  }
+  else if (wantSpecial) {
+    picked = specialCharacters;
+  }
+
 
 
 
